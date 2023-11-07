@@ -11,5 +11,17 @@
   - name: start docker service
     command: sudo systemctl start docker
 
+   
+  - name: stop docker container named insure-me
+    command: sudo docker stop insure-me
+    ignore_errors : true
+
+  - name: remove docker container named insure-me
+    command: sudo docker rm insure-me
+    ignore_errors : true
+
   - name: deploy insureme application
-    command: sudo docker run -itd -p 8081:8081 --name insure-me shubhamkushwah123/insure-me:1.0
+    command: sudo docker run -itd -p 8081:8081 manofoever/final-project:1.0
+
+  
+  
