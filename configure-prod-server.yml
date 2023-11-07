@@ -1,5 +1,5 @@
 ---
-- hosts: prod-server
+- hosts: production-server
   become: true
   tasks:
   - name: update apt
@@ -20,4 +20,5 @@
     ignore_errors : true
 
   - name: deploy insureme application
-    command: sudo docker run -itd -p 8082:8081 manofoever/insurance-project:1.0
+    command: sudo docker run -itd -p 8081:8081 manofoever/final-project:1.0
+

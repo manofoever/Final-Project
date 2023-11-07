@@ -17,22 +17,22 @@ public class Server_Testing {
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
 
-        driver.get("http://3.136.183.34:8081/contact.html");
+        driver.get("http://3.19.148.225:8081/contact.html");
 
         driver.findElement(By.id("inputName")).sendKeys("Hello");
-        System.out.println("Name Done!");
+        System.out.println("Name Updated!");
         Thread.sleep(1000);
         driver.findElement(By.id("inputNumber")).sendKeys("123456");
-        System.out.println("Number Done!");
+        System.out.println("Number Updated!");
         Thread.sleep(1000);
         driver.findElement(By.id("inputMail")).sendKeys("abc@gmail.com");
-        System.out.println("Mail Done!");
+        System.out.println("Mail Updated!");
         Thread.sleep(1000);
         driver.findElement(By.id("inputMessage")).sendKeys("123456");
-        System.out.println("Message Done!");
+        System.out.println("Message Updated!");
         Thread.sleep(1000);
         driver.findElement(By.id("my-button")).click();
-
+        Thread.sleep(2000);
         String responseText = driver.findElement(By.id("response")).getText();
         driver.quit();
         
